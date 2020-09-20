@@ -32,6 +32,6 @@ Following are command line arguments used by main.py file `python main.py`
 
 ## How to run
 
-1. Download the pretrained model or train own model by refering to [nianticlabs repo](https://github.com/nianticlabs/monodepth2/).
+1. Download the pretrained model or train own model by refering to [nianticlabs repo](https://github.com/nianticlabs/monodepth2/). This project uses ```mono_640x192``` model.
 
 2. Run in cmd ``` python test_video.py -i <videofile> ```
