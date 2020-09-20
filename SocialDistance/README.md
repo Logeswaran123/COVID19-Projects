@@ -2,12 +2,12 @@
 
 The project main idea is to ensure social distance practice is correctly followed in crowded public places.
 
-### Previous approach shortcoming
+## Previous approach shortcoming
 
 Images and video frames are 2D. If we detect a person and calculate the distance between them, the distance might be less even when the persons are far away.
 This might be due to the fact that persons are one behind the other and the depth information is not obtained.
 
-### How to account
+## How to account
 
 This project tackles the above mentioned problem by,
 
@@ -20,8 +20,18 @@ The output image will contain the depth information i.e. The persons at same dep
 
 4. Now, calculate the Euclidean distance between the two boxes. If the distance is less than the set distance threshold, the two people are close together. It can be concluded that NO SOCIAL DISTANCE is being followed.
 
-### How to run
+## Command Line Arguments
+
+Following are command line arguments used by main.py file `python main.py`
+```
+  1. -i     (required) : Path to a input video file (Default='video.mp4').
+  2. -st    (optional) : Detection Scores Threshold (Default=0.5).
+  3. -dt    (optional) : Distance Threshold (Default=50).
+  4. -dpt   (optional) : Depth Threshold (Default=0.1).
+```
+
+## How to run
 
 1. Download the pretrained model or train own model by refering to [nianticlabs repo](https://github.com/nianticlabs/monodepth2/).
 
-2. 
+2. ``` python test_video.py -i <videofile> ```
